@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt #all calls in django need c
 #and bad practice but that's fine
 from main.tests import allTests
 import unittest
-
+import time
 
 
 import json
@@ -34,6 +34,7 @@ def show(request):
 @csrf_exempt
 def welcome(request, user_id):
 	user = UserModel.objects.get(pk = user_id)
+	time.sleep(0.7)
 	context = {
 		"user" : user.username,
 		"log_count" : user.login_count,
