@@ -27,7 +27,7 @@ MAX_PASSWORD_LEN = 128
 
 @csrf_exempt
 def show(request):
-	time.sleep(random.random()*2.5)
+	time.sleep(random.random()*1.4)
 	context = {
 		"hello": "hello"
 	}
